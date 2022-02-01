@@ -85,9 +85,10 @@ app.post("/delete",function(req,res)
       }
   })
 });
-const APPBASE_URI = process.env.APPBASE_URI
-app.listen(APPBASE_URI, function()
+const port = process.env.PORT || 3000;
+
+app.listen(port, function()
 {
-    console.log("Server is listening to port 3000");
+    console.log("Server is listening to port :", port);
 })
 
